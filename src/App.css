@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Additional Custom Styles */
+
+/* Global Styles */
+body {
+  @apply bg-lightGray text-primary font-sans;
+}
+
+.container {
+  @apply mx-auto px-4;
+}
+
+/* Header Styles */
+header {
+  @apply bg-white shadow-md p-4 sticky top-0 z-10 flex justify-between items-center;
+}
+
+header h1 {
+  @apply text-2xl font-bold text-secondary;
+}
+
+header nav ul {
+  @apply flex space-x-6 text-grayText;
+}
+
+header nav ul li {
+  @apply hover:text-secondary cursor-pointer;
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+  header {
+    @apply flex flex-col items-start space-y-4;
+  }
+
+  header nav ul {
+    @apply flex-col space-y-2;
+  }
+}
+
+/* Section Styles */
+section {
+  @apply bg-white rounded-lg shadow-md p-6 mb-6;
+}
+
+h2 {
+  @apply text-xl font-semibold mb-4;
+}
+
+h3 {
+  @apply text-lg font-semibold mb-2;
+}
+
+ul.list-disc {
+  @apply ml-5 text-grayText;
+}
+
+/* Button Styles */
+button {
+  @apply bg-secondary text-whiteText px-4 py-2 rounded-md hover:bg-opacity-80;
+}
+
+/* Compare Medicine Cards */
+.card {
+  @apply border border-gray-300 rounded-lg shadow-lg p-4 flex flex-col items-center;
+}
+
+.card img {
+  @apply w-20 h-20 mb-4;
+}
+
+.card h3 {
+  @apply text-lg font-medium mb-2 text-center;
+}
+
+.card p {
+  @apply text-sm text-grayText text-center;
+}
+
+.card button {
+  @apply mt-4 bg-secondary text-whiteText px-4 py-2 rounded-md hover:bg-opacity-80;
+}
+
+/* Responsive Cards */
+@media (max-width: 1024px) {
+  .compare-medicine {
+    @apply grid grid-cols-2 gap-4;
+  }
+}
+
+@media (max-width: 768px) {
+  .compare-medicine {
+    @apply grid grid-cols-1 gap-4;
+  }
+}
+
+/* FAQ Section */
+.faq {
+  @apply bg-gray-100 p-6 rounded-lg;
+}
+
+.faq h3 {
+  @apply text-lg font-medium;
+}
+
+.faq p {
+  @apply text-sm text-grayText;
+}
+
+/* Footer Styles */
+footer {
+  @apply bg-primary text-white py-6;
+}
+
+footer .container {
+  @apply flex justify-between items-center flex-wrap;
+}
+
+footer a {
+  @apply hover:underline text-sm;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  footer .container {
+    @apply flex flex-col items-start space-y-4;
+  }
+}
